@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+</head>
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form #signUpForm="ngForm" (ngSubmit)="signUp(signUpForm.value)">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input ngModel type="text" name="first_name" placeholder="First Name" required="">
+          <input ngModel type="text" name="last_name" placeholder="Last Name" required="">
+					<input ngModel type="email" name="username" placeholder="Email" required="">
+
+					<input ngModel type="password" name="password" placeholder="Password" required="">
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form #loginForm="ngForm" (ngSubmit)="loginData(loginForm.value)">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input ngModel type="text" name="username" placeholder="Email" required="">
+					<input ngModel type="password" name="password" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
+
