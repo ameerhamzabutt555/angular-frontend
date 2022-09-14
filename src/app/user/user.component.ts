@@ -8,6 +8,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent  {
+  first_name:any="";
+  last_name:any="";
+  username:any="";
+  password:any="";
 
   constructor(private router:Router,private user:UserservicesService) { }
 
@@ -19,8 +23,16 @@ export class UserComponent  {
       if(results['status']=="201"){
         Swal.fire('User Rigester Successfully')
       }
+      this.first_name="";
+      this.last_name="";
+      this.username="";
+      this.password="";
     },error=>{
       Swal.fire('please Fill Correct Form')
+      this.first_name="";
+      this.last_name="";
+      this.username="";
+      this.password="";
     })
   }
 

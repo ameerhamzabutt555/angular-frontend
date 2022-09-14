@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   link(data:any){
     this.user.attribution(data).subscribe((results)=>{
       if(results['att_url'] !==""){
-        
+
         Swal.fire("Copy",results['att_url'])
       }
     },error=>{
