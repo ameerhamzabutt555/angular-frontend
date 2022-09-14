@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { UserComponent } from './user/user.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UserComponent } from './user/user.component';
     DashboardComponent,
     SidenavComponent,
     UserComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
