@@ -17,6 +17,16 @@ export class UserservicesService {
     return this.http.post(url,formdata);
 
   }
+  attribution(body:any){
+    let formdata = new FormData()
+    for(let a in body){
+      formdata.set(a,body[a])
+    }
+
+    let url = "http://13.58.95.104:8000/attributions/";
+    return this.http.post(url,formdata);
+
+  }
   savedata(data:any){
 
     let url = "http://13.58.95.104:8000/users/";

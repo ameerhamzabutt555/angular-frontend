@@ -18,6 +18,7 @@ import { UserComponent } from './user/user.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserservicesService } from './userservices.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     SidenavComponent,
     UserComponent,
     LandingPageComponent,
+    ErrorpageComponent,
   ],
   imports: [
     BrowserModule,

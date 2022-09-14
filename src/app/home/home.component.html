@@ -1,24 +1,14 @@
-<!-- <div class="container-fluid page">
-  <div class="d-flex page__box p-3 mt-2">Home</div>
-  <div class="page__content shadow p-3 position-relative">
-    <div class="page__content-data position-relative text-center">
-      <form>
-        <input id="name" type="text" >
-      </form>
-    </div>
-  </div>
-</div> -->
 
-<body>
+
   <div class="form-main">
   <div class="child-form">
-    <form>
-      <input class="first" type="text"  placeholder="Link">
-      <input class="second" type="text"  placeholder="Link">
-      <input class="third" type="text"  placeholder="Link">
-      <input class="forth" type="text"  placeholder="Link">
+    <form #linkForm="ngForm" (ngSubmit)="link(linkForm.value)">
+      <input [(ngModel)]="productlink" name="productlink" type="text"  placeholder="Product Link" >
+      <input  [(ngModel)]="campaignid" name="campaignid" type="text"  placeholder="Campaign Id" >
+      <input [(ngModel)]="adgroupid"  name="adgroupid" type="text"  placeholder="Adgroup Id" >
+      <input [(ngModel)]="creavtiveid"  name="creavtiveid" type="text"  placeholder="Creavtive Id" >
       <div class="btn-form">
-        <button class="btn btn-primary" style="width: 30%;" type="submit">Submit</button>
+        <button class="btn btn-primary" style="width: 30%;">Submit</button>
       </div>
     </form>
     </div>
