@@ -16,7 +16,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { UserComponent } from './user/user.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-
+import { UserservicesService } from './userservices.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,9 +39,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserservicesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
