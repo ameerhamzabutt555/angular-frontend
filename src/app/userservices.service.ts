@@ -13,7 +13,7 @@ export class UserservicesService {
       formdata.set(a,body[a])
     }
 
-    let url = "http://13.58.95.104:8000/login/";
+    let url = "https://attribution.protuffproducts.com/login/";
     return this.http.post(url,formdata);
 
   }
@@ -23,28 +23,17 @@ export class UserservicesService {
       formdata.set(a,body[a])
     }
 
-    let url = "http://13.58.95.104:8000/attributions/";
+    let url = "https://attribution.protuffproducts.com/attributions/";
     return this.http.post(url,formdata);
 
   }
   savedata(data:any){
 
-    let url = "http://13.58.95.104:8000/users/";
+    let url = "https://attribution.protuffproducts.com/users/";
     return this.http.post(url,data);
 
   }
-  del(id:any){
 
-    let url = `http://localhost:4000/v1/users/delete/${id}`;
-    return this.http.delete(url);
 
-  }
-
-  update(id:any,data:any){
-
-    let url = `http://localhost:4000/v1/users/update/${id}`;
-    return this.http.put(url,data);
-
-  }
 
 }
