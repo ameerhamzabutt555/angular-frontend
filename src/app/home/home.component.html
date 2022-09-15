@@ -1,5 +1,4 @@
 
-
   <div class="form-main">
   <div class="child-form">
     <form #linkForm="ngForm" (ngSubmit)="link(linkForm.value)">
@@ -8,7 +7,10 @@
       <input [(ngModel)]="adgroupid"  name="adgroupid" type="text"  placeholder="Adgroup Id" >
       <input [(ngModel)]="creavtiveid"  name="creavtiveid" type="text"  placeholder="Creavtive Id" >
       <div class="btn-form">
-        <button class="btn btn-primary" style="width: 30%;">Submit</button>
+<button type="submit" class="btn btn-primary" placement="bottom"
+        ngbPopover={{generateLink}} popoverTitle="Please Copy the Link" style="width: 30%;">
+  Generate Link
+</button>
       </div>
     </form>
     </div>

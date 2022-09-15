@@ -33,3 +33,10 @@
     margin-left: 25%;
      margin-top:2%;
   }
+  .my-custom-class {
+    background: aliceblue;
+    font-size: 125%;
+  }
+  .my-custom-class .arrow::after {
+    border-top-color: aliceblue;
+  }

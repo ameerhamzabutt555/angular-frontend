@@ -19,6 +19,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserservicesService } from './userservices.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     MatDividerModule,
     MatListModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [UserservicesService],
   bootstrap: [AppComponent],

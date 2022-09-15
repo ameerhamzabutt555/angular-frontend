@@ -7,13 +7,19 @@ import Swal from 'sweetalert2';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent  {
+export class UserComponent implements OnInit {
   first_name:any="";
   last_name:any="";
   username:any="";
   password:any="";
 
-  constructor(private router:Router,private user:UserservicesService) { }
+
+  constructor(private router:Router,private user:UserservicesService) {
+
+  }
+
+
+
 
   signUp(val:any){
     console.warn(val)
@@ -38,6 +44,7 @@ export class UserComponent  {
 
   loginData(vals:any){
     this.user.login(vals).subscribe((results)=>{
+      console.log(results)
       var token=results["access_token"]
       localStorage.setItem("token",token)
       this.router.navigate(['home'])
@@ -46,6 +53,11 @@ export class UserComponent  {
     })
    }
 
+
+
+  public ngOnInit(){
+
+  }
   //  login(){
   //   this.router.navigate(['home'])
   //  }
